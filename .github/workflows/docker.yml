@@ -12,11 +12,7 @@ jobs:
           registry: registry.patr.cloud
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASS }}
-      - name: Publish to Registry
-        uses: elgohr/Publish-Docker-Github-Action@master
-        with:
-          name: 397098526bd54271b9cb6ef92fce0ce5/my
-          username: ${{ secrets.USER }}
-          password: ${{ secrets.PASS }}
-          registry: registry.patr.cloud
-          tags: "latest-xray"
+      - name: Build and push
+        run: docker build . -t registry.patr.cloud/397098526bd54271b9cb6ef92fce0ce5/my
+      - name: Test
+        run: docker push registry.patr.cloud/397098526bd54271b9cb6ef92fce0ce5/my
