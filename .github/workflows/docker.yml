@@ -11,6 +11,6 @@ jobs:
         with:
           name: 397098526bd54271b9cb6ef92fce0ce5/my
           username: ${{ secrets.user }}
-          password: ${{ secrets.pass }}
+          password: ${{ secrets.token }}
           registry: registry.patr.cloud
           tags: "latest-xray"
