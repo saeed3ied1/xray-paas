@@ -9,7 +9,7 @@ jobs:
       - name: Building Docker Image
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: saeed3ied/397098526bd54271b9cb6ef92fce0ce5/my
+          name: 397098526bd54271b9cb6ef92fce0ce5/my
           username: ${{ secrets.user }}
           password: ${{ secrets.pass }}
           registry: registry.patr.cloud
