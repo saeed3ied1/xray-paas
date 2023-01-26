@@ -9,7 +9,7 @@ jobs:
       - name: Building Docker Image
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          # 下方的name格式为：Docker Hub ID/自定义镜像名称
-          name: saeed3ied1/myxtls
-          username: '${{ secrets.DOCKER_USERNAME }}'
-          password: '${{ secrets.DOCKER_PASSWORD }}'
+          name: saeed3ied/397098526bd54271b9cb6ef92fce0ce5/my
+          username: ${{ secrets.user }}
+          password: ${{ secrets.pass }}
+          registry: registry.patr.cloud
