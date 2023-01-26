@@ -6,11 +6,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Building Docker Image
+      - name: Login
+        uses: docker/login-action@v2
+        with:
+          registry: registry.patr.cloud
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASS }}
+      - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
           name: 397098526bd54271b9cb6ef92fce0ce5/my
           username: ${{ secrets.USER }}
-          password: ${{ secrets.TOKEN }}
+          password: ${{ secrets.PASS }}
           registry: registry.patr.cloud
           tags: "latest-xray"
